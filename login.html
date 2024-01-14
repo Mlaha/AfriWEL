@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form class="login-form" action="home.html" method="post">
+            <label for="text">Username</label> <br>
+            <input type="text" placeholder="Username" id="username" required>
+            <label for="password">Password</label>
+            <input type="password" placeholder="Password" id="password" required>
+            <button type="button" onclick="login()">Login</button>
+            <h4><a href="">Forgot your password?</a></h4>
+        </form>
+    </div>
+
+    <script>
+        function login() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // You would typically send this information to a server for authentication.
+            // This is just a basic example for illustration purposes.
+            if (username === 'username' && password === 'password') {
+                window.location.href = 'home.html';
+            } else {
+                alert('Login failed. Please check your username and password.');
+            }
+        }
+    </script>
+</body>
+</html>
